@@ -1,32 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
+import { useState } from "react";
 
-function App() {
+function App(){
+    let[count,setCount]=useState(1);
+    function checkTheCount(){
+        setCount(count++)
+        
+    
+    }
 
-  
-  const [name,setName]=useState("hello world");
-  function changeMessage(){
-  setName("Good morning");
-  
-  }
-  
-  
-  
-  
-  return (
-    <div className='header'>
-    <h1>{name}</h1>
-    <button onClick={changeMessage}>changeMessage</button>
-    </div>
-    
-  
-    
 
-    
-    
-  );
+return(
+    <div>
+        <div>{count}</div>
+        <button onClick={checkTheCount}>check</button>
+        </div>
+
+);
 }
-
 export default App;
+
+
 
